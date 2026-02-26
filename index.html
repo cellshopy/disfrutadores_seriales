@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Disfrutadores Seriales de la Vida | Test</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-dot"></div>
+        <div class="brand-text">
+          <div class="brand-title">Disfrutadores Seriales</div>
+          <div class="brand-sub">de la vida</div>
+        </div>
+      </div>
+      <div class="badge">Demo</div>
+    </header>
+
+    <!-- INTRO -->
+    <section id="screen-intro" class="screen active">
+      <h1>¿Qué tipo de Disfrutador Serial sos?</h1>
+      <p class="lead">
+        Están en todos lados, pero no son todos. Le agarraron el gusto a disfrutar la vida sin moderación.
+        A veces generan envidia. Muchas veces admiración. Hoy… te toca descubrir el tuyo.
+      </p>
+      <button id="btn-start" class="btn primary">Empezar test</button>
+      <p class="tiny">Toma menos de 1 minuto.</p>
+    </section>
+
+    <!-- QUIZ -->
+    <section id="screen-quiz" class="screen">
+      <div class="progress">
+        <div class="progress-bar"><span id="progress-fill"></span></div>
+        <div class="progress-text"><span id="q-current">1</span>/<span id="q-total">10</span></div>
+      </div>
+
+      <h2 id="question-title"></h2>
+      <div id="answers" class="answers"></div>
+
+      <div class="nav">
+        <button id="btn-back" class="btn ghost">Atrás</button>
+        <button id="btn-next" class="btn primary" disabled>Siguiente</button>
+      </div>
+    </section>
+
+    <!-- LEAD FORM (ANTES DEL RESULTADO) -->
+    <section id="screen-lead" class="screen">
+      <h2>Listo. Ya sabemos tu perfil.</h2>
+      <p class="lead">
+        Dejá tus datos y te mostramos tu resultado + tu “territorio” en Cellshop.
+      </p>
+
+      <form id="lead-form" class="form">
+        <div class="grid">
+          <label>
+            Nombre
+            <input id="inp-nombre" type="text" placeholder="Ej: Sofi" />
+          </label>
+
+          <label>
+            Email <span class="req">*</span>
+            <input id="inp-email" type="email" placeholder="tu@email.com" required />
+          </label>
+
+          <label>
+            WhatsApp
+            <input id="inp-whatsapp" type="tel" placeholder="+595..." />
+          </label>
+
+          <label>
+            Ciudad
+            <input id="inp-ciudad" type="text" placeholder="Ej: Asunción" />
+          </label>
+        </div>
+
+        <div class="checks">
+          <div class="checks-title">¿Qué te interesa más?</div>
+          <div id="interest-box" class="checks-grid"></div>
+        </div>
+
+        <label class="consent">
+          <input id="inp-consent" type="checkbox" required />
+          Acepto recibir novedades y ofertas de Cellshop.
+        </label>
+
+        <button class="btn primary" type="submit" id="btn-see-result">
+          Ver mi resultado
+        </button>
+
+        <p id="lead-status" class="tiny"></p>
+      </form>
+    </section>
+
+    <!-- RESULT -->
+    <section id="screen-result" class="screen">
+      <div class="result-card">
+        <div class="result-kicker">Tu perfil</div>
+        <h2 id="result-title"></h2>
+        <p id="result-text" class="lead"></p>
+
+        <div class="result-actions">
+          <a id="btn-go-category" class="btn primary" href="#" target="_blank" rel="noopener">
+            Entrar a mi territorio en Cellshop
+          </a>
+          <button id="btn-restart" class="btn ghost">Hacerlo de nuevo</button>
+        </div>
+
+        <div class="share">
+          <div class="tiny">Tip demo: copiá esto para compartir</div>
+          <input id="share-text" type="text" readonly />
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span class="tiny">Disfrutadores Seriales de la Vida · Demo</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
